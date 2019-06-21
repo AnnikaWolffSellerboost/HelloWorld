@@ -16,10 +16,12 @@ class ContentController extends Controller
 {
     public function sayHello(Twig $twig):string
     {
-        print_r($twig);
-      
+   
+        $data = [
+            'text' => "Dieser Text wird ans Template übergeben, yay 1234 <div>hallo</div>"
+        ];
 
-        return $twig->render('HelloWorld::content.hello');
+        return $twig->render('HelloWorld::content.hello', $data);
     }
 
     public function sayBye(Twig $twig):string
