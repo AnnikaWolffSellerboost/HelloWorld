@@ -16,6 +16,9 @@ class ContentController extends Controller
 {
     public function sayHello(Twig $twig):string
     {
+        print_r($twig);
+      
+
         return $twig->render('HelloWorld::content.hello');
     }
 }
