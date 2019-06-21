@@ -21,4 +21,9 @@ class ContentController extends Controller
 
         return $twig->render('HelloWorld::content.hello');
     }
+
+    public function sayBye(Twig $twig):string
+    {
+        return $twig->render('HelloWorld::content.goodbye');
+    }
 }
